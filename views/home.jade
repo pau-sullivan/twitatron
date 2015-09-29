@@ -1,7 +1,6 @@
-doctype html
-html
-  head
-    title Twitatron
-  body
-    h1 A Twitatron view has been born!
-    img(src="/img/birdatron-small.jpg")
+extends layout
+
+block content
+  h1 A Twitatron view has been born!
+  h2 You are visiting from #{ip}
+  img(src="/img/birdatron-small.jpg")
