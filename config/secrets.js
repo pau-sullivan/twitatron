@@ -3,14 +3,14 @@ module.exports = {
 
   cryptos: {
     algorithm: 'aes256',
-    key: process.env.CRYPTO_KEY || 'Your crypto key goes here'
+    key: process.env.CRYPTO_KEY || 'paula'
   },
 
-  sessionSecret: process.env.SESSION_SECRET || 'Your session secret goes here',
+  sessionSecret: process.env.SESSION_SECRET || 'sessionpaula',
 
   twitter: {
-    consumerKey: process.env.TWITTER_KEY || 'Your Twitter consumer key',
-    consumerSecret: process.env.TWITTER_SECRET  || 'Your Twitter consumer secret',
+    consumerKey: process.env.TWITTER_KEY || '9ZsrThZR9RJgiNgPvkKH2ftn5',
+    consumerSecret: process.env.TWITTER_SECRET  || 'Fcf5ROsvOamYCPcsE9stgroWzEVddmNIpCIdWEurvX0LTscION',
     callbackURL: process.env.TWITTER_CALLBACK || 'http://localhost:3000/auth/twitter/callback',
     passReqToCallback: true
   }
