@@ -2,5 +2,8 @@ extends layout
 
 block content
   h1 A Twitatron view has been born!
-  h2 You are logged as #{username}
+    if user
+        h2 You are logged as #{user.name}
+    else
+        h2 You ar not logged in
   img(src="/img/birdatron-small.jpg")

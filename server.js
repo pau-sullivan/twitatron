@@ -18,6 +18,7 @@ db.once('open', function (callback) {
 // Load controllers
 var homeController = require('./controllers/home');
 var authController = require('./controllers/auth');
+var mentionController = require('./controllers/mention');
 
 // Create our Express application
 var app = express();
@@ -71,6 +72,10 @@ router.get('/auth/twitter/callback', authController.twitterCallback, function(re
   res.redirect(req.session.returnTo || '/');
   });
 router.get('/auth/logout', authController.logout);
+
+router.route('/mentions')
+    .get(mentionController.getMentions);
+  //.post(authController.isAuthenticated, beerController.postBeers)
 
 // Register all our routes
 app.use(router);
